@@ -1,2 +1,9 @@
 # credit-risk-classification
  
+The analysis involved utilizing machine learning techniques to examine a dataset containing historical lending data from a peer-to-peer lending services company. The goal was to construct a model capable of assessing the creditworthiness of borrowers. The analysis considered various factors such as loan size, interest rate, borrower's income, debt-to-income ratio, number of accounts, derogatory marks, and total debt.
+
+To conduct the analysis, the dataset consisting of 77,536 data points was divided into training and testing sets. The training set was utilized to build an initial logistic regression model called Logistic Regression Model 1, using the LogisticRegression module from scikit-learn. Logistic Regression Model 1 was then applied to the testing dataset to predict whether a loan to a borrower would be categorized as low-risk or high-risk.
+
+The initial model was developed using a dataset that contained 75,036 low-risk loan data points and 2,500 high-risk data points. To address the class imbalance and ensure an equal representation of data points, the training set was resampled using the RandomOverSampler module from imbalanced-learn. This resampling technique generated 56,277 data points for both low-risk (0) and high-risk (1) loans, maintaining the distribution of the original dataset.
+
+Using the resampled data, a new logistic regression model, Logistic Regression Model 2, was constructed. The purpose of this model remained the same: to predict whether a loan to a borrower in the testing set would be categorized as low-risk or high-risk.In terms of identifying high-risk loans, neither model achieved precision scores above 90%. Nonetheless, Logistic Regression Model 2 exhibited overall fewer false predictions on the testing data and is considered the preferred model due to its higher accuracy and recall scores.
